@@ -5,6 +5,17 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    background: url(/image/bg-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: var(--Violet);
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 h1,
@@ -13,29 +24,123 @@ h3 {
     font-family: 'Poppins', sans-serif;
 }
 
-.icon {
+.logo {
+    width: 150px;
+    height: 80px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    padding: 0;
+}
+
+
+/* CALLOUT */
+
+.callout {
+    display: flex;
+    flex-direction: column;
+}
+
+.callout__image {
+    width: 100%;
+    padding: 0 2.5rem;
+    margin: 0;
+}
+
+.callout__body {
+    padding: 0 2rem;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+.callout__heading {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: 0 2rem;
+    margin-top: 3rem;
+}
+
+.callout__text {
+    margin-bottom: 2rem;
+    padding: 0 1.9rem;
+}
+
+.btn {
+    background-color: #fff;
+    color: var(--Violet);
+    padding: .5rem 1rem;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+    transition: background .3s ease-in-out;
+}
+
+.callout__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+.callout__icons {
+    align-self: center;
+    margin-top: 1.5rem;
+}
+
+.icons {
     display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
 }
 
 .icon {
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 40px;
+    height: 40px;
     stroke-width: 0;
     stroke: currentColor;
-    fill: currentColor;
+    fill: #fff;
+    margin: 1rem;
+    margin-top: 3rem;
 }
 
-.icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:1024px) {
+    body {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    body {
+        background-image: url(/image/bg-desktop.svg);
+    }
+    .grid {
+        display: grid;
+        gap: 0;
+    }
+    .grid-2x2 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .callout__icons {
+        align-self: flex-end;
+        margin-top: 5rem;
+        align-self: flex-end;
+    }
+    .callout__body {
+        padding: 0;
+    }
+    .callout__heading {
+        text-align: left;
+    }
 }
