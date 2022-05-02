@@ -10,8 +10,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: var(--Violet);
-    font-size: 20px;
+    font-size: 15px;
     line-height: 1.5;
+    font-weight: 400;
 }
 
 * {
@@ -58,11 +59,15 @@ h3 {
     padding-bottom: 0;
     padding: 0 2rem;
     margin-top: 3rem;
+    font-weight: 600;
+    text-align: center;
 }
 
 .callout__text {
     margin-bottom: 2rem;
     padding: 0 1.9rem;
+    text-align: center;
+    font-weight: 400;
 }
 
 .btn {
@@ -116,7 +121,7 @@ h3 {
 
 @media screen and (min-width:1024px) {
     body {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
@@ -142,5 +147,12 @@ h3 {
     }
     .callout__heading {
         text-align: left;
+    }
+    .callout__text {
+        text-align: left;
+    }
+    .btn {
+        align-self: flex-start;
+        margin: 1.9rem;
     }
 }
